@@ -1,0 +1,151 @@
+.logo{
+    max-width: 100px;
+}
+body{
+    background-color: rgba(163, 235, 181, 0.63);
+}
+img{
+    max-width: 100%;
+}
+.header{
+    padding: 20px 35px 20px 35px;
+    text-align: center;
+    background-color: rgb(10, 71, 36)
+}
+.footer h1{
+    font-size: 1rem;
+    color: white;
+    margin: 0;
+}
+.footer{
+    text-align: center;
+    height: 80px;
+    align-content: center;
+    align-items: center;
+    background-color: rgb(10, 71, 36);
+    margin-top: 30px;
+}
+
+.header_area{
+    background-color: rgb(10, 71, 36);
+}
+.main{
+    margin-top: 50px;
+}
+#menutoggle{
+display: none;
+}
+.icon{
+    display:none;
+}
+.icon i{
+        color:white;
+    }
+.header_area{
+    align-items: center;
+}
+.navtop{
+    background-color:rgb(11, 145, 40);
+    margin: 10px;
+    color: white;
+}
+.navside_content{
+    background-color:rgb(11, 145, 40);
+    margin-bottom: 5px;
+    padding: .2rem 1rem !important;
+    width: 100%;
+    color: white;
+}
+.active{
+    background-color: rgb(25, 201, 78) !important ;
+}
+.carousel-caption{
+    background-color: rgba(255, 255, 255, 0.158);
+    color: rgba(0, 0, 0);
+    font-weight: bold;
+}
+.carousel-caption h5{
+
+    font-weight: bolder;
+}
+.cardsarea{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    margin-top: 15px;
+}
+@media screen and (min-width:1px) and (max-width:767px){
+    .navtop{
+        margin: 5px 0;
+        width: 100%;
+        color: white;
+        
+    }
+    .menu1{
+        height: 100%;
+    }
+    #nav{
+    transform: translate(0,-500px);     
+    width: 100%;
+    background-color: rgb(10, 71, 36);
+    height: fit-content;
+    transition: 1s;
+    position: fixed;
+    z-index: -999;
+    left: 0;
+    }
+    #menutoggle:checked ~ .icon i:first-child{
+        display: none;
+    }
+    #menutoggle:checked ~ .icon i:nth-child(2){
+        display: block;
+    }
+    #menutoggle:not(checked) ~ .icon i:first-child{
+        display: block;
+    }
+    #menutoggle:not(checked) ~ .icon i:nth-child(2){
+        display: none;
+    }
+    #menutoggle:checked ~ #nav{
+        transform: translate(0, 0);
+        height: fit-content;   
+    }
+    #menutoggle:checked ~::before .header{
+
+        height: 100%;   
+
+    }
+
+    .icon{
+        display: block;
+        position: fixed;
+        font-size:20px;
+        top: 5%;
+        transform: translate(0,-50%);
+        right: 5%;
+        z-index: 99999;
+    }
+    .header{
+        padding: 0;
+        position: fixed;
+        top: 0px;
+        width: 100%;
+        max-width: 100%;
+        z-index: 50;
+    }
+    .ftmob{
+        position: absolute;
+        width: 100%;
+        max-width: 100%;
+        left: 0;
+    }
+
+    .main{
+        margin-top: 120px;
+    }
+    .navside{
+        margin-top: 15px;
+    }
+    
+}
